@@ -90,7 +90,7 @@ export default function RegisterScreen({ navigation }) {
           <View style={styles.logoCircle}>
             <Text style={styles.logoIcon}>🏃</Text>
           </View>
-          <Text style={styles.appName}>RunPT</Text>
+          <Text style={styles.appName}>Gops Running</Text>
           <Text style={styles.tagline}>Create your runner account</Text>
         </View>
 
@@ -179,25 +179,25 @@ export default function RegisterScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
-  scroll: { flexGrow: 1, padding: SPACING.lg, justifyContent: 'center' },
+  scroll: { flexGrow: 1, padding: SPACING.md, justifyContent: 'center' },
 
-  header: { alignItems: 'center', marginBottom: SPACING.xl },
-  logoCircle: { width: 70, height: 70, borderRadius: 35, backgroundColor: COLORS.primary, alignItems: 'center', justifyContent: 'center', marginBottom: SPACING.md, ...SHADOW.md },
-  logoIcon: { fontSize: 30 },
-  appName: { fontSize: FONTS.size.xxxl, fontWeight: '800', color: COLORS.secondary, letterSpacing: -0.5 },
-  tagline: { fontSize: FONTS.size.sm, color: COLORS.gray, marginTop: 4, textAlign: 'center' },
+  header: { alignItems: 'center', marginBottom: SPACING.sm },
+  logoCircle: { width: 56, height: 56, borderRadius: 28, backgroundColor: COLORS.primary, alignItems: 'center', justifyContent: 'center', marginBottom: SPACING.xs, ...SHADOW.md },
+  logoIcon: { fontSize: 24 },
+  appName: { fontSize: FONTS.size.xxl, fontWeight: '800', color: COLORS.secondary, letterSpacing: -0.5 },
+  tagline: { fontSize: FONTS.size.sm, color: COLORS.gray, marginTop: 2, textAlign: 'center' },
 
-  card: { backgroundColor: COLORS.card, borderRadius: RADIUS.lg, padding: SPACING.lg, ...SHADOW.md, marginBottom: SPACING.md },
-  cardTitle: { fontSize: FONTS.size.xl, fontWeight: '700', color: COLORS.dark, marginBottom: SPACING.md },
+  card: { backgroundColor: COLORS.card, borderRadius: RADIUS.lg, padding: SPACING.md, ...SHADOW.md, marginBottom: SPACING.sm },
+  cardTitle: { fontSize: FONTS.size.lg, fontWeight: '700', color: COLORS.dark, marginBottom: SPACING.sm },
 
   errorBox: { backgroundColor: '#FFEBEE', borderRadius: RADIUS.sm, padding: SPACING.sm, marginBottom: SPACING.md, borderLeftWidth: 3, borderLeftColor: COLORS.danger },
   errorText: { color: COLORS.danger, fontSize: FONTS.size.sm },
 
   label: { fontSize: FONTS.size.sm, fontWeight: '600', color: COLORS.darkGray, marginBottom: SPACING.xs },
   input: {
-    backgroundColor: COLORS.light, borderRadius: RADIUS.sm, padding: SPACING.md,
+    backgroundColor: COLORS.light, borderRadius: RADIUS.sm, padding: SPACING.sm,
     fontSize: FONTS.size.md, color: COLORS.dark, borderWidth: 1, borderColor: COLORS.border,
-    marginBottom: SPACING.md,
+    marginBottom: SPACING.sm,
   },
   passwordRow: { position: 'relative' },
   passwordInput: { paddingRight: 50 },

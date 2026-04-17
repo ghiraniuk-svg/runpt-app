@@ -1,23 +1,23 @@
 {
   "expo": {
-    "name": "Run PT",
-    "slug": "run-pt",
+    "name": "Gops Running",
+    "slug": "gops-running",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.runpt.app"
+      "bundleIdentifier": "com.gopsrunning.app"
     },
     "android": {
-      "package": "com.runpt.app"
+      "package": "com.gopsrunning.app"
     },
     "web": {
       "bundler": "metro",
       "baseUrl": "/runpt-app",
       "favicon": "./assets/favicon.png",
-      "name": "RunPT",
-      "shortName": "RunPT",
+      "name": "Gops Running",
+      "shortName": "GoRun",
       "description": "Couch to 5K — Guided by your PT",
       "themeColor": "#FF6B35",
       "backgroundColor": "#1a1a3e",

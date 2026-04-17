@@ -1,4 +1,4 @@
-const CACHE = 'runpt-v1';
+const CACHE = 'gops-running-v1';
 const ASSETS = [
   '/runpt-app/',
   '/runpt-app/index.html',

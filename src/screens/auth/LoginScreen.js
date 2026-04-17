@@ -49,7 +49,7 @@ export default function LoginScreen({ navigation }) {
           <View style={styles.logoCircle}>
             <Text style={styles.logoIcon}>🏃</Text>
           </View>
-          <Text style={styles.appName}>RunPT</Text>
+          <Text style={styles.appName}>Gops Running</Text>
           <Text style={styles.tagline}>Couch to 5K — Guided by your PT</Text>
         </View>
 
@@ -128,27 +128,27 @@ export default function LoginScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },
-  scroll: { flexGrow: 1, padding: SPACING.lg, justifyContent: 'center' },
-  header: { alignItems: 'center', marginBottom: SPACING.xl },
+  scroll: { flexGrow: 1, padding: SPACING.md, justifyContent: 'center' },
+  header: { alignItems: 'center', marginBottom: SPACING.md },
   logoCircle: {
-    width: 80, height: 80, borderRadius: 40,
+    width: 64, height: 64, borderRadius: 32,
     backgroundColor: COLORS.primary, alignItems: 'center', justifyContent: 'center',
-    marginBottom: SPACING.md,
+    marginBottom: SPACING.sm,
     ...SHADOW.md,
   },
-  logoIcon: { fontSize: 36 },
-  appName: { fontSize: FONTS.size.xxxl, fontWeight: '800', color: COLORS.secondary, letterSpacing: -0.5 },
+  logoIcon: { fontSize: 28 },
+  appName: { fontSize: FONTS.size.xxl, fontWeight: '800', color: COLORS.secondary, letterSpacing: -0.5 },
   tagline: { fontSize: FONTS.size.sm, color: COLORS.gray, marginTop: 4, textAlign: 'center' },
   card: {
-    backgroundColor: COLORS.card, borderRadius: RADIUS.lg, padding: SPACING.lg,
-    ...SHADOW.md, marginBottom: SPACING.lg,
+    backgroundColor: COLORS.card, borderRadius: RADIUS.lg, padding: SPACING.md,
+    ...SHADOW.md, marginBottom: SPACING.md,
   },
-  cardTitle: { fontSize: FONTS.size.xl, fontWeight: '700', color: COLORS.dark, marginBottom: SPACING.lg },
+  cardTitle: { fontSize: FONTS.size.lg, fontWeight: '700', color: COLORS.dark, marginBottom: SPACING.md },
   label: { fontSize: FONTS.size.sm, fontWeight: '600', color: COLORS.darkGray, marginBottom: SPACING.xs },
   input: {
-    backgroundColor: COLORS.light, borderRadius: RADIUS.sm, padding: SPACING.md,
+    backgroundColor: COLORS.light, borderRadius: RADIUS.sm, padding: SPACING.sm,
     fontSize: FONTS.size.md, color: COLORS.dark, borderWidth: 1, borderColor: COLORS.border,
-    marginBottom: SPACING.md,
+    marginBottom: SPACING.sm,
   },
   passwordRow: { position: 'relative' },
   passwordInput: { paddingRight: 50 },

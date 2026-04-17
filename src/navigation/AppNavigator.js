@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
+import { View, Text, ActivityIndicator, StyleSheet, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useAuth } from '../context/AuthContext';
 import { useData } from '../context/DataContext';
@@ -63,11 +64,12 @@ function UserHomeStack() {
 }
 
 function UserTabs() {
+  const insets = useSafeAreaInsets();
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarStyle: { backgroundColor: COLORS.white, borderTopColor: COLORS.border, paddingBottom: 4 },
+        tabBarStyle: { backgroundColor: COLORS.white, borderTopColor: COLORS.border, paddingBottom: Math.max(insets.bottom, 4), height: 56 + Math.max(insets.bottom, 0) },
         tabBarActiveTintColor: COLORS.primary,
         tabBarInactiveTintColor: COLORS.gray,
         tabBarLabelStyle: { fontSize: FONTS.size.xs, fontWeight: '600' },
@@ -101,11 +103,12 @@ function PTStack() {
 }
 
 function PTTabs() {
+  const insets = useSafeAreaInsets();
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarStyle: { backgroundColor: COLORS.white, borderTopColor: COLORS.border, paddingBottom: 4 },
+        tabBarStyle: { backgroundColor: COLORS.white, borderTopColor: COLORS.border, paddingBottom: Math.max(insets.bottom, 4), height: 56 + Math.max(insets.bottom, 0) },
         tabBarActiveTintColor: COLORS.pt,
         tabBarInactiveTintColor: COLORS.gray,
         tabBarLabelStyle: { fontSize: FONTS.size.xs, fontWeight: '600' },
@@ -138,11 +141,12 @@ function AdminStack() {
 }
 
 function AdminTabs() {
+  const insets = useSafeAreaInsets();
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarStyle: { backgroundColor: COLORS.white, borderTopColor: COLORS.border, paddingBottom: 4 },
+        tabBarStyle: { backgroundColor: COLORS.white, borderTopColor: COLORS.border, paddingBottom: Math.max(insets.bottom, 4), height: 56 + Math.max(insets.bottom, 0) },
         tabBarActiveTintColor: COLORS.superAdmin,
         tabBarInactiveTintColor: COLORS.gray,
         tabBarLabelStyle: { fontSize: FONTS.size.xs, fontWeight: '600' },
@@ -168,7 +172,7 @@ export default function AppNavigator() {
     return (
       <View style={styles.loadingContainer}>
         <Text style={styles.loadingLogo}>🏃</Text>
-        <Text style={styles.loadingTitle}>RunPT</Text>
+        <Text style={styles.loadingTitle}>Gops Running</Text>
         <ActivityIndicator color={COLORS.primary} style={{ marginTop: 20 }} />
       </View>
     );

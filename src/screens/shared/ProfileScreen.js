@@ -71,7 +71,7 @@ export default function ProfileScreen() {
       {freshUser.role === 'pt' && (
         <View style={styles.infoCard}>
           <Text style={styles.infoTitle}>Your Account</Text>
-          <Text style={styles.infoText}>You are a Personal Trainer on RunPT.</Text>
+          <Text style={styles.infoText}>You are a Personal Trainer on Gops Running.</Text>
           <Text style={styles.infoText}>Clients are assigned to you by the Head PT.</Text>
         </View>
       )}
@@ -99,7 +99,7 @@ export default function ProfileScreen() {
         <Text style={styles.logoutBtnText}>Sign Out</Text>
       </TouchableOpacity>
 
-      <Text style={styles.version}>RunPT v1.0.0 — Couch to 5K</Text>
+      <Text style={styles.version}>Gops Running v1.0.0 — Couch to 5K</Text>
 
       {/* Web-compatible confirm modal */}
       <Modal visible={showConfirm} transparent animationType="fade" onRequestClose={() => setShowConfirm(false)}>

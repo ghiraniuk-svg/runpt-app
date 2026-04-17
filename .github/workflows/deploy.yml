@@ -52,8 +52,8 @@ jobs:
           cp assets/apple-touch-icon.png dist/apple-touch-icon.png
           cat > dist/manifest.json << 'EOF'
           {
-            "name": "RunPT — Couch to 5K",
-            "short_name": "RunPT",
+            "name": "Gops Running — Couch to 5K",
+            "short_name": "GoRun",
             "description": "Couch to 5K — Guided by your PT",
             "start_url": "/runpt-app/",
             "scope": "/runpt-app/",
