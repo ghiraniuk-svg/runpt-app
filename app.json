@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Run PT",
+    "slug": "run-pt",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.runpt.app"
+    },
+    "android": {
+      "package": "com.runpt.app"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
