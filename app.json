@@ -14,7 +14,16 @@
     },
     "web": {
       "bundler": "metro",
-      "baseUrl": "/runpt-app"
+      "baseUrl": "/runpt-app",
+      "favicon": "./assets/favicon.png",
+      "name": "RunPT",
+      "shortName": "RunPT",
+      "description": "Couch to 5K — Guided by your PT",
+      "themeColor": "#FF6B35",
+      "backgroundColor": "#1a1a3e",
+      "display": "standalone",
+      "orientation": "portrait",
+      "lang": "en-GB"
     }
   }
 }

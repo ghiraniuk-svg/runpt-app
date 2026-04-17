@@ -45,6 +45,31 @@ jobs:
           sed -i 's|src="/_expo/|src="/runpt-app/_expo/|g' dist/index.html
           sed -i 's|href="/_expo/|href="/runpt-app/_expo/|g' dist/index.html
 
+      - name: Inject PWA tags and service worker
+        run: |
+          cp public/sw.js dist/sw.js
+          sed -i 's|</head>|  <link rel="manifest" href="/runpt-app/manifest.json" />\n  <link rel="apple-touch-icon" href="/runpt-app/apple-touch-icon.png" />\n  <meta name="apple-mobile-web-app-capable" content="yes" />\n  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />\n  <meta name="apple-mobile-web-app-title" content="RunPT" />\n  <meta name="theme-color" content="#FF6B35" />\n  <script>if("serviceWorker" in navigator){navigator.serviceWorker.register("/runpt-app/sw.js")}</script>\n</head>|' dist/index.html
+          cp assets/apple-touch-icon.png dist/apple-touch-icon.png
+          cat > dist/manifest.json << 'EOF'
+          {
+            "name": "RunPT — Couch to 5K",
+            "short_name": "RunPT",
+            "description": "Couch to 5K — Guided by your PT",
+            "start_url": "/runpt-app/",
+            "scope": "/runpt-app/",
+            "display": "standalone",
+            "orientation": "portrait",
+            "theme_color": "#FF6B35",
+            "background_color": "#1a1a3e",
+            "icons": [
+              { "src": "/runpt-app/icon-192.png", "sizes": "192x192", "type": "image/png" },
+              { "src": "/runpt-app/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+            ]
+          }
+          EOF
+          cp assets/icon-192.png dist/icon-192.png
+          cp assets/icon-512.png dist/icon-512.png
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
