@@ -13,7 +13,8 @@
       "package": "com.runpt.app"
     },
     "web": {
-      "bundler": "metro"
+      "bundler": "metro",
+      "baseUrl": "/runpt-app"
     }
   }
 }
